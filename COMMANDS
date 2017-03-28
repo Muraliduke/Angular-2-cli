@@ -1,0 +1,32 @@
+npm install -g angular-cli 
+
+dowloads an installs angular client on directive
+FOR NEW PROJECT
+ng new projectname
+
+ng new myProject  -->newproject creation
+
+ls --> lists files
+
+ng serve --> opens browser http://localhost:4200/
+ng serve --open
+
+ng serve --host 0.0.0.0 --port 4201
+adding component-->scafolding process
+g--> generate
+ng g component componentname
+
+BOOTSTRAP css:-  save denotes including as dependencies and saving it
+npm install bootstrap --save
+
+ing angular-cli.json
+styles :- add bootstrap dependencies
+
+"../node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+
+for cli project 
+
+
+npm install ng2-bootstrap --save
+http://valor-software.com/ng2-bootstrap/#/tabs
