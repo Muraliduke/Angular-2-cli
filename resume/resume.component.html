@@ -1,0 +1,53 @@
+ <div [ngStyle]="myObj"> </div>
+<div class="container-fluid">
+
+	
+			
+			
+		<nav class="navbar navbar-inverse">
+		
+			<div class="row">
+				<div class="col-md-2 pull-left mydetail ">
+					<p class='col-md-offset-1'>MURALI S</p>
+					<p class='col-md-offset-1'>UI developer</p>
+				</div>
+				<div class="col-md-6">
+					<h1><marquee>My Resume and Portfolio</marquee></h1>
+
+				</div>
+				<div class="col-md-3 pull-right">
+					<img class='pull-right' src="images/CI.png" alt="CI">
+				</div>
+			</div>
+		</nav>
+
+	
+		
+		 
+	
+	
+
+	
+	<div class="resumeContents">
+	<div class="list pull-left col-md-3">
+		<ul class="list-group">
+
+				<li class="list-group-item"><a [routerLink]="['Summary']">Summary and Role</a></li>
+				<li class="list-group-item"><a [routerLink]="['Education']">Education</a></li>
+				<li class="list-group-item"><a [routerLink]="['Skills']">Skill sets</a></li>
+				<li class="list-group-item"><a [routerLink]="['Projects']">Projects Experience</a></li>
+				<li class="list-group-item"><a [routerLink]="['Achievements']">Achievements</a></li>
+				<li class="list-group-item"><a [routerLink]="['Hobbies']">Hobbies and extra-curricular activities</a></li>
+				<li class="list-group-item"><a [routerLink]="['Details']">How to reach me</a></li>
+
+		</ul>
+
+	</div>
+	<div class="eachcontent pull-left col-md-9">
+		<router-outlet></router-outlet>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	
+</div>
+

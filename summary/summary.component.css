@@ -1,0 +1,10 @@
+.bold{
+	font-weight: bold;
+}
+.margin{
+	margin: 10px 0px;
+}
+.summary{
+	font-size: 16px;
+    font-style: italic;
+}

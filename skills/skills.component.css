@@ -1,0 +1,40 @@
+.bold{
+	font-weight: bold;
+}
+.margin{
+	margin: 10px 0px;
+}
+ul {
+    background: #3399ff;
+    padding: 20px;
+}
+ul li {
+    background: #cce5ff;
+    margin: 5px;
+}
+.WD ul {
+    background: #ff9999;
+    padding: 20px;
+}
+
+.WD ul li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin: 5px;
+}
+span{
+	background: #3399ff;
+	height: 12px;
+    width: 22px;
+    border: 1px solid black;
+    display: inline-block;
+    outline: 5px solid #cce5ff;
+}
+.WD span{
+	background: #ffe5e5;
+	height: 12px;
+    width: 22px;
+    border: 1px solid black;
+    display: inline-block;
+    outline: 5px solid #ff9999;
+}
