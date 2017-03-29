@@ -1,0 +1,40 @@
+<table>
+  
+  <thead>
+    <tr >
+      <th *ngFor="let header of table.head">{{header.name}}</th>
+      <th *ngFor="let header of table.head">{{header.Age}}</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr *ngFor="let body of table.body"><td>{{body.name}}</td>
+    <td>{{body.Age}}</td></tr>
+    
+  </tbody>
+  
+</table>
+
+table={
+"head":[
+{"name":"Name","Age":"Age"}
+]
+,
+"body": [
+      {
+        
+        "name": "Jensen Hampton",
+        "Age": "22"
+      },
+      {
+        
+        "name": "Erna Tate",
+        "Age": "23"
+      },
+      {
+        
+        "name": "Hannah Frost",
+        "Age": "24"
+      }
+    ]
+}
