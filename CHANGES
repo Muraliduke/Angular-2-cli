@@ -1,0 +1,39 @@
+accordionContents=[{
+    section : 'Section1',
+    menu : ["sh1","sh2","sh3"],
+    hideme : true
+},
+{
+    section : 'Section2',
+    menu : ["ssh1","ssh2","ssh3"],
+    hideme : true
+},
+{
+    section : 'Section3',
+    menu : ["sssh1","sssh2","sssh3"],hideme : true
+},
+{
+    section : 'Section4',
+    menu : ["ssssh1","ssssh2","ssssh3"],
+    hideme : true
+}
+  ];
+
+
+
+<div class="row">
+<ul class="procedures col-md-4" >
+    <li *ngFor="let procedure of accordionContents|orderBy : convertSorting();let i = index ">
+        <h4  (click)="func(procedure,i,'main')" (mouseover)='procedure.show = true' (mouseout)="procedure.show = false"><a href="javascript:void(0);">{{procedure.section}} 
+          <span class="headerarea" [hidden]="!procedure.show" (click)="headerclick(procedure,i)"> add all </span> </a>
+          
+        </h4>
+         <div class="procedure-details" [hidden]="procedure.hideme" (mouseover)='procedure.showcontent = true' 
+         (mouseout)="procedure.showcontent = false" *ngFor="let d of procedure.menu;let i = index">
+            <p> {{d}}   </p>
+            <span [hidden]="!procedure.showcontent" (click)="contentclick(procedure,procedure.menu)"> add all </span>
+           <div class="clearfix"></div>
+         </div>
+    </li>
+</ul>
+</div>
