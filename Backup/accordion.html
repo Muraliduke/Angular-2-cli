@@ -1,0 +1,56 @@
+<div class="row">
+<ul class="procedures col-md-4" >
+    <li *ngFor="let procedure of accordionContents;let i = index ">
+        <h4 *ngIf="procedure.menu.length > 0" (click)="func(procedure,i,'main')" (mouseover)='procedure.show = true' (mouseout)="procedure.show = false"><a href="javascript:void(0);">{{procedure.section}} 
+          <span class="headerarea" [hidden]="!procedure.show" (click)="headerclick(procedure,i)"> add all </span> </a>
+          
+        </h4>
+         <div class="procedure-details" *ngFor="let d of procedure.menu;let j = index" (mouseover)='togglemain(j)' 
+         (mouseout)='outmain(j)' [hidden]="procedure.hideme">
+            <p> {{d}}   </p>
+            <span  [hidden]="j!=indx" (click)="contentclick(procedure,procedure.menu,i,j)"> add </span>
+           <div class="clearfix"></div>
+         </div>
+    </li>
+</ul>
+
+
+<div class="pushpop col-md-5">
+
+
+  <ul >
+    
+    <li *ngFor="let procedure of divmovemnt;let i = index" (mouseover)='toggle(i)' (mouseout)='out(i)'>
+
+        <p> {{procedure}}   </p>
+        <span [hidden]="i!=ind" (click)="contentRemove(procedure,ivalue,i)" > remove </span>
+        <div class="clearfix"></div>
+            
+         
+    </li>
+       
+  </ul>
+</div>
+
+
+</div>
+<!--<div id="accordion">
+  <section *ngFor="let procedure of accordionContents;let i = index">
+    <p class="pointer">&#9654;</p><h1><a href="javascript:void(0);" (click)="procedure.hideme = !procedure.hideme">{{procedure.section}}</a></h1>
+    <p [class.ac_hidden]="!procedure.hideme" [hidden]="procedure.hideme">{{procedure.menu}} </p>
+  </section>
+  
+</div>-->
+
+
+<!--<h4  (click)="func(procedure,i,'secondary')" (mouseover)='procedure.shows = true' (mouseout)="procedure.shows = false">
+         <a href="javascript:void(0);">{{procedure.section}} 
+          <span class="headerarea" [hidden]="!procedure.shows" (click)="headerRemove(procedure,i)"> remove all </span> </a>
+        </h4>-->
+         <!--<div class="procedure-details" [hidden]="procedure.hidemes" (mouseover)='procedure.menu[j].showcontents = true' 
+         (mouseout)="procedure.menu[j].showcontents = false">-->
+            
+
+            <!--<span [hidden]="!procedure.menu[j].showcontents" (click)="contentRemove(procedure.menu)"> remove all </span>
+           <div class="clearfix"></div>
+         </div>-->
